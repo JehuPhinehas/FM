@@ -10,6 +10,7 @@ To write a program for Frequency Modulation and Demodulation using SCILAB and to
 EQUIPMENTS REQUIRED
 
 •	Computer with i3 Processor
+
 •	SCI LAB
 
 THEORY:
@@ -65,30 +66,40 @@ MODEL GRAPH:
 
 
 Program
-
+~~~
+Am=15.65;
+fm=1809;
+Ac=1.5*Am;
+fc=10*fm;
+fs=10*fc;
+t=0:(1/fs):(2/fm);
+B=5.9;
+em=Am*cos(2*3.14*fm*t);
+subplot(3,1,1);
+plot(t,em);
+ec=Ac*cos(2*3.14*fc*t);
+subplot(3,1,2);
+plot(t,ec);
+eFm=Ac.*cos((2*3.14*fc*t)+B.*sin(2*3.14*fm*t));
+subplot(3,1,3);
+plot(t,eFm);
+~~~
 
 Output Waveform
+
+<img width="1917" height="1198" alt="image" src="https://github.com/user-attachments/assets/e1dc5f3c-83e8-4548-9243-4bcef27912fb" />
 
 
 
 Tabulation
 
-
+<img width="1526" height="876" alt="image" src="https://github.com/user-attachments/assets/dec35f3f-6a67-454d-887e-59221dff0988" />
 
 Calculation
 
-
-
-Frequency Deviation Practical = 
-
-Modulation Index Practical	= 
-
-Modulation Index Theoretical	=
-
+<img width="1211" height="1600" alt="image" src="https://github.com/user-attachments/assets/4a57e6fa-3c8a-4c7e-adc1-6730653402b3" />
 
 
 RESULT:
 
 Thus, the frequency modulation and demodulation is successfully done and the output is experimentally verified.
-
-
